@@ -41,10 +41,9 @@ let quotes = [
 
 // Function using random numbers to generate quotes from above array.
 function getRandomQuote() {
-  let i = Math.floor(Math.random() * quotes.length);
+  let i = Math.floor(Math.random() * quotes.length) + 1;
         return quotes[i];
   }
-
 
 
 
