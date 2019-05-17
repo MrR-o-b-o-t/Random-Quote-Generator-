@@ -14,6 +14,7 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
+
 let quotes = [
   {
   quote: "We have staked the whole future of our new nation, not upon the power of government; far from it. We have staked the future of all our political constitutions upon the capacity of each of ourselves to govern ourselves according to the moral principles of the Ten Commandments of God.",
@@ -47,18 +48,16 @@ let quotes = [
   quote: "To live is the rarest thing in the world. Most people exist, that is all.",
   source: "Oscar Wilde.",
   citation: " ",
-  year:" ",
+  year:" "
 },
 
- ];
-console.log(quotes);
+ ]
 
-
+// Use random numbers to generate quotes from array.
 function getRandomQuote() {
-  var randomNumber = Math.floor(Math.random() * (quotes.length));
-  documnet.getElementById("quote-box").innerHTML = quotes[randomNumber];
-}
-
+  let i = Math.floor(Math.random() * quotes.length);
+        return quotes[i];
+  }
 
 
 
@@ -75,6 +74,21 @@ function getRandomQuote() {
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
+function printQuote(){
+let HTML = '';
+let i = getRandomQuote();
+
+HTML += '<p> class = "quote">' + i.quote + '</p>';
+  HTML += '<p class = "source">' + i.source + '</p>';
+
+    if (i.year) {
+      HTML += '<p class = "year">' + i.year + '</p>';
+}
+      if (i.citation) {
+        HTML += '<p class = "citation">' + i.citation + '</p>';
+      }
+document.getElementById('quote-box').innerHTML = HTML;
+}
 
 
 
