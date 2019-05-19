@@ -1,4 +1,4 @@
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
+
 
 // Array of quotes used to print to screen.
 let quotes = [
@@ -24,6 +24,7 @@ let quotes = [
 },
 
 {
+
   quote: "A room without books is like a body without a soul.",
   source: "Marcus Tullius Cicero.",
   citation: null,
@@ -45,9 +46,14 @@ function getRandomQuote() {
         return quotes[i];
   }
 
+// Function to pull random image
+  function getRandomImage(){
+      let randomImage = Math.floor(Math.random() * 8000);
+        return "https://source.unsplash.com/random?count=${" + randomImage + "}";
+}
 
 
-// Function for printing random qotes to quote box.
+// Function for printing random qotes and images to page.
 function printQuote(){
 let HTML = '';
 let i = getRandomQuote();
@@ -61,9 +67,18 @@ HTML += '<p class = "quote">' + i.quote + '</p>';
       if (i.citation) {
         HTML += '<p class = "citation">' + i.citation + '</p>';
       }
-            document.getElementById('quote-box').innerHTML = HTML;
-}
 
-// "show another quote" button triggers the 'printQuote' function calling a random quote.
+document.getElementById('quote-box').innerHTML = HTML;
+
+      let randomImage = Math.floor(Math.random() * 100);
+        document.body.style.backgroundImage = "url(" + getRandomImage() + ")";
+          document.getElementById("quote-box").innerHTML;
+        }
+
+
+// PrintQuote interval to change quote if not prompted
+setInterval("printQuote()", 8000);
+
+
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
