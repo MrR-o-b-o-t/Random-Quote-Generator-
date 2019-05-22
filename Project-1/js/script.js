@@ -7,6 +7,7 @@ let quotes = [
   source: "James Madison",
   citation: "General Assembly of the State of Virginia.",
   year: "1778",
+  topic: "Politics."
 },
 
 {
@@ -14,28 +15,26 @@ let quotes = [
   source: "Thomas Jefferson",
   citation: "Letter to William Hamilton.",
   year: "1800",
+  topic: "Motivational."
 },
 
 {
   quote: "We can't help everyone, but everyone can help someone.",
   source: "Rondald Reagan.",
-  citation: null,
-  year: null,
+  topic: "Motivational."
 },
 
 {
 
   quote: "A room without books is like a body without a soul.",
   source: "Marcus Tullius Cicero.",
-  citation: null,
-  year: null,
+  topic: "Life"
 },
 
 {
   quote: "To live is the rarest thing in the world. Most people exist, that is all.",
   source: "Oscar Wilde.",
-  citation: null,
-  year: null,
+  topic: "Life."
 },
 
  ]
@@ -67,6 +66,9 @@ HTML += '<p class = "quote">' + i.quote + '</p>';
       if (i.citation) {
         HTML += '<p class = "citation">' + i.citation + '</p>';
       }
+        if (i.topic) {
+          HTML += '<p class = "topic">' + i.topic + '</p>';
+        }
 
 document.getElementById('quote-box').innerHTML = HTML;
 

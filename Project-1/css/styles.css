@@ -5,12 +5,12 @@
 
 .body {
   background-image: url("https://source.unsplash.com/random");
-  color: white;
+  color: black;
   font-family: 'Playfair Display', serif;
 }
 
 #quote-box {
-  position: absolute;
+  position: relative;
   top: 20%;
   left: 10%;
   right: 10%;
@@ -24,11 +24,12 @@
   line-height: 1.1;
   position: relative;
   margin: 0;
+  background-color:  rgb(255,255,255);
 }
 
 .quote:before, .quote:after {
-  font-size: 3rem;
-  line-height: 2.5rem;
+  font-size: 4.rem;
+  line-height: 10rem;
   position: absolute;
 }
 
@@ -40,7 +41,7 @@
 
 .quote:after {
   content: "”";
-  bottom: -.1em;
+  top: .5em;
   margin-left: .1em;
   position: absolute;
 }
@@ -48,9 +49,9 @@
 .source {
   font-size: 1rem;
   letter-spacing: 0.05em;
-  line-height: 1.1;
+  line-height: 2;
   text-align: right;
-  margin-right: 4em;
+  background-color:  rgb(255,255,255);
 }
 
 .source:before {
@@ -63,6 +64,7 @@
   letter-spacing: 0.05em;
   line-height: 1.1;
   text-align: left;
+  background-color: rgb(255,255,255);
 }
 
 .citation:before {
@@ -70,7 +72,7 @@
   font-style: normal;
   font-size: 1rem;
   letter-spacing: 0.05em;
-  line-height: 1.1;
+  line-height: 2;
   text-align: left;
 }
 
@@ -80,6 +82,33 @@
   font-size: 1rem;
   letter-spacing: 0.05em;
   line-height: 1.1;
+  text-align: left;
+  background-color:  rgb(255,255,255);
+}
+.year{
+  background-color: rgb(255,255,255);
+  font-style: normal;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  line-height: 2.1;
+  text-align: left;
+}
+
+.topic {
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: left;
+  background-color: rgb(255,255,255);
+}
+
+.topic:before {
+  content: "Topic -  ";
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 2;
   text-align: left;
 }
 
@@ -93,12 +122,12 @@
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #336699;
+  background-color: rgb(77,77,255);
   padding: 20px 0;
   transition: .5s ;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgb(179,217,255);
 }
 
 #loadQuote:focus {
@@ -110,7 +139,10 @@
     font-size: 4rem;
   }
   .quote:before, .quote:after {
-    font-size: 6rem;
+    font-size: rem;
+    background-color: rgb(255,255,255);
+    position: static;
+
   }
   .source {
     font-size: 1.25rem;
