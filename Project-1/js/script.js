@@ -47,7 +47,7 @@ function getRandomQuote() {
 
 // Function to pull random image
   function getRandomImage(){
-      let randomImage = Math.floor(Math.random() * 8000);
+      let randomImage = Math.floor(Math.random() * 100000);
         return "https://source.unsplash.com/random?count=${" + randomImage + "}";
 }
 
@@ -79,7 +79,7 @@ document.getElementById('quote-box').innerHTML = HTML;
 
 
 // PrintQuote interval to change quote if not prompted
-setInterval("printQuote()", 8000);
+setInterval("printQuote()", 7000);
 
 
 
