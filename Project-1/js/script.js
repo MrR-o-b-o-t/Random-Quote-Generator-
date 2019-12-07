@@ -84,3 +84,10 @@ setInterval("printQuote()", 7000);
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+let temp = function (input){
+  let userInput = (input - 32) * 5/9
+    return userInput
+}
+  let value = temp(68)
+  console.log(value)

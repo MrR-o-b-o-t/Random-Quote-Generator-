@@ -1,0 +1,299 @@
+
+.body{
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a {
+    color: grey;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logo{
+    color: grey;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-size: 24px;
+}
+
+.projects{
+    flex: 1;
+    
+}
+
+.cta-select{
+    border: 2px solid white;
+    -webkit-text-fill-color: white;
+    width: 120px;
+    height: 43px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px lightgrey;
+    background-color: rgb(53, 95, 128); 
+    background: linear-gradient(#e66465, #9198e5);
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.mywork{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 60vh;
+    padding: 50px 0 0 30px;
+    align-items: center;
+}
+
+.introduction{
+    flex: .8
+}
+
+.cover img{
+    filter: drop-shadow(0px 5px 3px slategray);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.intro-text h1{
+    background: linear-gradient(to right, #e66465, #9198e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-style: bold;   
+    letter-spacing: 1px;    
+    padding: 0 0 20px 120px;
+    text-shadow: 2px 2px 35px grey;
+}
+
+.intro-text p{
+    font-size: 16px;
+    font-weight: bold;
+    color: slategrey;
+
+}
+
+.about-me-section{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+
+}
+
+.about-me{
+    margin: auto;
+    width: 100%;
+}
+
+.hobbies ul{
+    margin: auto;
+}
+
+<style>
+* {
+  box-sizing: border-box;
+}
+</style>
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links{
+    width: 50%;
+              }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%; 
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    } to{
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+</style>
